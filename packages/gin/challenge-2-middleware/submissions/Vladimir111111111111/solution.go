@@ -268,9 +268,6 @@ func (rl *RateLimiter) getVisitor(ip string) *rate.Limiter {
 	return v.limiter
 }
 
-var rl *RateLimiter
-var once sync.Once
-
 func RateLimitMiddleware() gin.HandlerFunc {
 	// TODO: Implement rate limiting
 	// Limit: 100 requests per IP per minute
